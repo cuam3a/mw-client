@@ -1,38 +1,207 @@
 .App {
-  text-align: center;
+    width: auto;
+    height: 50vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0px 0px 5px 1px black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-m {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-background {
+    background-size: cover;
+    margin-top: 60px;
+    height: 40vh;
+    position: absolute;
+    width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App-background-m {
+    background-size: cover;
+    margin-top: 30px;
+    height: 50vh;
+    position: absolute;
+    width: 160px;
+    overflow-y: auto
 }
 
-.App-link {
-  color: #61dafb;
+.App-content {
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-content-m {
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+}
+
+.row-content {
+    font-size: 8px;
+    align-items: "center";
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+}
+
+.row-content-m {
+    font-size: 8px;
+    align-items: "center";
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+    width: 140px;
+}
+
+.row-logo {
+    height: 40px;
+    width: auto;
+}
+
+.font-title {
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.font-text {
+    font-size: 8px;
+    font-weight: normal;
+}
+
+.font-title-m {
+    font-size: 10px;
+    font-weight: bolder;
+    width: 140px;
+}
+
+.font-text-m {
+    font-size: 8px;
+    font-weight: normal;
+    width: 140px;
+}
+
+.button-accion {
+    width: fit-content;
+    margin-right: 10px !important;
+    margin-top: 10px !important;
+    font-size: 5px !important;
+    width: 80px !important;
+}
+
+.button-link {
+    width: fit-content;
+    margin-top: 10px !important;
+    font-size: 5px !important;
+    width: 40px !important;
+}
+
+.button-accion-m {
+    width: fit-content;
+    margin-right: 10px !important;
+    margin-top: 10px !important;
+    font-size: 5px !important;
+    width: 100px !important;
+}
+
+@media (max-device-width: 480px) {
+    .App {
+        background-size: contain;
+        background-position: center center;
+        box-shadow: 0px 0px 5px 1px black;
+    }
+    .App-m {
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 60vh;
+        overflow: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .App-background {
+        background-size: cover;
+        margin-top: 50px;
+        height: 40vh;
+        position: absolute !important
+    }
+    .App-background-m {
+        background-size: cover;
+        margin-top: 30px;
+        height: 50vh;
+        position: absolute;
+        width: 200px;
+        overflow-y: auto
+    }
+    .App-content {
+        align-items: center;
+        justify-content: flex-start;
+        display: flex;
+    }
+    .App-content-m {
+        align-items: center;
+        justify-content: flex-start;
+        display: flex;
+    }
+    .row-content {
+        font-size: 8px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-top: 10px;
+    }
+    .row-content-m {
+        font-size: 8px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-top: 10px;
+        width: 200px;
+    }
+    .row-logo {
+        height: 40px;
+        width: auto;
+    }
+    .font-title {
+        font-size: 10px;
+        font-weight: bolder;
+    }
+    .font-text {
+        font-size: 8px;
+        font-weight: normal;
+    }
+    .font-title-m {
+        font-size: 10px;
+        font-weight: bolder;
+        width: 200px;
+    }
+    .font-text-m {
+        font-size: 8px;
+        font-weight: normal;
+        width: 200px;
+    }
+    .button-accion {
+        width: fit-content;
+        margin-right: 10px !important;
+        margin-top: 10px !important;
+        font-size: 5px !important;
+        width: 80px !important;
+    }
+    .button-accion-m {
+        width: fit-content;
+        margin-right: 10px !important;
+        margin-top: 10px !important;
+        font-size: 5px !important;
+        width: 120px !important;
+    }
+    ;
 }

@@ -1,0 +1,57 @@
+import axios from "axios";
+import authHeader from "./authHeader";
+import global from "./global.service"
+
+const API_URL = global.getURLServer();
+
+const getViews = async(idMiwhats) => {
+    let res = {};
+    await axios({
+            url: API_URL + '/dashboard/getViews/' + idMiwhats,
+            method: 'GET',
+            headers: authHeader()
+        })
+        .then(function(response) {
+            if (response.data.token) {
+                localStorage.setItem("token", JSON.stringify(response.data.token));
+            }
+            res = response.data;
+        })
+        .catch(function(error) {
+            if(res.tokenError){
+                global.TokenError()
+            }else{
+                res.error = error;
+            }
+        })
+    return res;
+};
+
+const getClicks = async(idMiwhats,dateStart,dateEnd,btnSearch) => {
+    let res = {};
+    await axios({
+            url: API_URL + '/dashboard/getClicks/' + idMiwhats + '/' + dateStart + '/' + dateEnd + '/' + btnSearch,
+            method: 'GET',
+            headers: authHeader()
+        })
+        .then(function(response) {
+            if (response.data.token) {
+                localStorage.setItem("token", JSON.stringify(response.data.token));
+            }
+            res = response.data;
+        })
+        .catch(function(error) {
+            if(res.tokenError){
+                global.TokenError()
+            }else{
+                res.error = error;
+            }
+        })
+    return res;
+};
+
+// eslint-disable-next-line import/no-anonymous-default-export
+export default {
+    getViews,
+    getClicks
+};
